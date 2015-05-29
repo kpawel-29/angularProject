@@ -8,13 +8,10 @@
  * Controller of the angularProjectApp
  */
 var app = angular.module('angularProjectApp');
-  app.controller('MainCtrl', function ($scope) {
+  app.controller('MainCtrl', function ($scope, articleService){
+    $scope.articles = articleService.getArticles();
   });
 
-
-app.controller('articleController', function($scope, articleService){
-  $scope.articles = articleService.getArticles();
-});
 
 
 

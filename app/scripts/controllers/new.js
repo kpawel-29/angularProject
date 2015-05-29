@@ -10,9 +10,11 @@
 angular.module('angularProjectApp')
   .controller('NewCtrl', function ($scope, articleService) {
 
-
+    $scope.added = false;
     $scope.addArticle = function(article) {
       articleService.addArticle(article);
+      $scope.added = true;
     };
+
 
   });
