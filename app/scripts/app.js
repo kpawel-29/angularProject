@@ -52,11 +52,13 @@ var app = angular.module('angularProjectApp', [
 
 var articlesTest = [
   {
+    index: "1",
     title: "test tytuł",
     body: "Jak sobie pościlisz tak się wyśpisz",
     author: "test@testowy.com"
   },
   {
+    index: "2",
     title: "Maciek test",
     body: "Chodź tu i zostań już na zawsze",
     author: "maciek@testowy.com"

@@ -12,6 +12,7 @@ var app = angular.module('angularProjectApp');
     $scope.articles = articleService.getArticles();
   });
 
+  app.controller('showDetails', function(index){
 
-
+  });
 
