@@ -1,1 +1,14 @@
-<p>This is the about view.</p>
+<div class="jumbotron" ng-controller="NewCtrl">
+  <h2>Add new article!</h2>
+  <form role="form" ng-submit="addArticle()">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="article.title" placeholder="tytuł" class="form-control">
+        <input type="textarea" ng-model="article.body" placeholder="tresc artykułu" class="form-control">
+        <input type="text" ng-model="article.author" placeholder="autor" class="form-control">
+      </div>
+      <input type="button" class="btn btn-primary" value="Dodaj">
+    </div>
+  </form>
+</div>
+
