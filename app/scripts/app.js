@@ -43,24 +43,36 @@ var app = angular.module('angularProjectApp', [
       return articles;
     };
 
+    var editArticle = function(article){
+      if(articles[article.index].index){
+        articles[article.index].details = false;
+      } else {
+        articles[article.index].details = true;
+      }
+      console.log(article.index);
+    };
+
     return {
       addArticle: addArticle,
-      getArticles: getArticles
+      getArticles: getArticles,
+      editArticle: editArticle
     }
   });
 
 
 var articlesTest = [
   {
-    index: "1",
+    index: "0",
+    details: false,
     title: "test tytuł",
-    body: "Jak sobie pościlisz tak się wyśpisz",
+    body: "Jak sobie pościlisz tak sisdfsf fsdfsdf sdfsdfz sfzsfs fzsfzs fzsf zsfszg zrgzrdr zzb hzb zbzrfs fzsfzs fzsf zsfszg zrgzrdr zzb hzb zbzrzę wyśpisz",
     author: "test@testowy.com"
   },
   {
-    index: "2",
+    index: "1",
+    details: false,
     title: "Maciek test",
-    body: "Chodź tu i zostań już na zawsze",
+    body: "Chodź tu i zostań już na zfs fzsfzs fzsf zsfszg zrgzrdr zzb hzb zbzrawsze",
     author: "maciek@testowy.com"
   }
 ];

@@ -1,0 +1,7 @@
+<h3>{{article.title}}</h3>
+<p ng-hide="article.details" >{{article.body | limitTo:10}} ...</p>
+<p ng-hide="!article.details">{{article.body}}</p>
+<cite ng-show="article.details">~{{article.author}}</cite>
+<p>
+  <a role="button" class="btn btn-default" ng-click="editArtDetails(article)">{{buttonValue.message}}</a>
+</p>

@@ -1,16 +1,3 @@
-<div ng-repeat="article in articles">
-  <div class="col-md-4">
-    <h3>{{article.title}}</h3>
-    <p>{{article.body}}</p>
-    <p>
-      <a class="btn btn-default" ng-click="showDetails(article.index)" role="button">View details</a>
-    </p>
-  </div>
-<!--
-    <h3>{{article.title}}</h3>
-    <h5>{{article.body}}</h5>
-    <cite>-{{article.author}}</cite>
--->
-
-
+<div ng-repeat="article in articles" ng-controller="buttonController as btnCtrl">
+  <article-template ng-class="{ 'col-md-4':!article.details}" ng-class="{'col-md-10':article.details}"></article-template>
 </div>
