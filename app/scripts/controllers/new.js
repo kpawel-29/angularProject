@@ -13,7 +13,7 @@ angular.module('angularProjectApp')
     $scope.added = false;
     $scope.addArticle = function(article) {
       var size = articleService.getArticles().length;
-      article.index = size+1;
+      article.index = size;
       article.details = false;
       articleService.addArticle(article);
       $scope.added = true;
